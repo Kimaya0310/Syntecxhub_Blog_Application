@@ -65,5 +65,9 @@ The app starts on `http://localhost:5173`.
 1. Register an account at `/register`.
 2. Click **Write a post** to open the editor — add a cover image, title, rich text content, and tags.
 3. Publish immediately or save as a draft.
-4. Manage everything you've written (including drafts) from **Dashboard**.
-5. Any signed-in user can like and comment on published posts; only the author (or an admin) can edit/delete a post.
+## Live Demo
+
+🔗 https://marginalia-navy.vercel.app/ 
+NOTE: First load may take ~30-50 seconds if the backend has been idle
+5. Manage everything you've written (including drafts) from **Dashboard**.
+6. Any signed-in user can like and comment on published posts; only the author (or an admin) can edit/delete a post.
