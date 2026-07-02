@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-paper text-ink font-body antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display text-ink;
+  }
+  ::selection {
+    @apply bg-moss/20;
+  }
+  :focus-visible {
+    outline: 2px solid #3F6C51;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Signature element: the byline strip — a thin metadata rule used
+     under titles across nav, cards, and post detail pages. */
+  .byline {
+    @apply flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.14em] text-ink/60;
+  }
+  .byline::before {
+    content: "";
+    @apply inline-block w-4 h-px bg-clay;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-ink text-paper font-body font-medium px-5 py-2.5 rounded-sm hover:bg-moss-dark transition-colors duration-200;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 border border-ink/20 text-ink font-body font-medium px-5 py-2.5 rounded-sm hover:border-ink/60 transition-colors duration-200;
+  }
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 text-rust border border-rust/30 font-body font-medium px-4 py-2 rounded-sm hover:bg-rust/5 transition-colors duration-200;
+  }
+
+  .input-field {
+    @apply w-full bg-white/60 border border-ink/15 rounded-sm px-4 py-2.5 font-body text-ink placeholder:text-ink/35 focus:border-moss focus:ring-1 focus:ring-moss transition-colors duration-200;
+  }
+}
+
+/* React Quill theme overrides to match the editorial palette */
+.quill-editorial .ql-toolbar {
+  @apply border-ink/15 bg-white/50 rounded-t-sm;
+  font-family: "Inter", sans-serif;
+}
+.quill-editorial .ql-container {
+  @apply border-ink/15 rounded-b-sm bg-white/60 font-body text-base;
+  min-height: 320px;
+}
+.quill-editorial .ql-editor {
+  min-height: 320px;
+}
+
+/* Rendered post content typography */
+.post-content h1, .post-content h2, .post-content h3 {
+  @apply font-display mt-8 mb-3;
+}
+.post-content p {
+  @apply mb-4 leading-relaxed;
+}
+.post-content a {
+  @apply text-moss underline underline-offset-2;
+}
+.post-content img {
+  @apply rounded-sm my-6;
+}
+.post-content blockquote {
+  @apply border-l-2 border-clay pl-4 italic text-ink/70 my-6;
+}
+.post-content ul, .post-content ol {
+  @apply mb-4 pl-6;
+}
+.post-content li {
+  @apply mb-1;
+}
