@@ -70,5 +70,6 @@ The app starts on `http://localhost:5173`.
 
 ## Live Demo
 
-🔗 https://marginalia-navy.vercel.app/ 
+🔗 https://marginalia-navy.vercel.app
 NOTE: First load may take ~30-50 seconds if the backend has been idle
+
